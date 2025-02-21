@@ -1,1 +1,1 @@
-Use menu button to explore my intern project 
+Click  Main button by change into different my intern project 
