@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from fuzzywuzzy import process
+from rapidfuzz import process
 from fpdf import FPDF
 
 # Load chatbot question-answer dataset
