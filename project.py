@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from fuzzywuzzy import process
+
 from fpdf import FPDF
 
 # Home Page
