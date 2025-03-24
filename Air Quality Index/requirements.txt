@@ -1,5 +1,5 @@
 streamlit
-fuzzywuzzy
+rapidfuzz
 python-Levenshtein
 pandas
 numpy
