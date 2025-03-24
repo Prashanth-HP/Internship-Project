@@ -5,18 +5,75 @@ import pandas as pd
 # Home Page
 def Home():
     st.title("🌍 Welcome to Your Air Quality Companion!")
-    st.markdown("### Hey there! 👋")
-    st.write("Our **Air Quality Monitoring App** helps you track pollution levels, compare cities, and make informed choices for a healthier life. 🌱💨")
+    
+    # Add a welcoming image (Ensure you have 'home_banner.jpg' in your project)
 
-# Dashboard Page
+    st.markdown(
+        """
+        ### Hey there! 👋  
+        Ever wondered how clean the air around you really is? You're in the right place!  
+        Our **Air Quality Monitoring App** helps you track pollution levels, compare cities, and make informed choices for a healthier life. 🌱💨
+        """
+    )
+
+    st.divider()
+
+    st.subheader("🚀 What You Can Do Here")
+    st.write("Here's what makes this app awesome:")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("📍 **City-wise Pollution Analysis** – Compare different locations")
+        st.markdown("📊 **Interactive Dashboards** – Visualize trends easily")
+        st.markdown("🌍 **Make Healthier Choices** – Breathe better, live better")
+
+    with col2:
+        st.markdown("💡 **Understand Gases & Pollutants** – Learn what affects your health")
+        st.markdown("🤖 **Data-Driven Chatbot.** – Ask questions, get insights")
+
+
+    st.divider()
+
+    st.subheader("🛠️ How to Get Started?")
+    st.markdown(
+        """
+        - 📊 **Go to the Dashboard** → Explore real-time pollution data  
+        - 📍 **Check Info Section** → Understand pollutants & gases  
+        - 💬 **Chat with our bot** → Get quick air quality insights  
+        """
+    )
+
+    st.warning("Your health matters. Stay informed. Breathe fresh! 😊")
+
+
+
+
 def dashboard_page():
     st.title("Power BI Dashboard")
+
+    # Create two columns to display images side by side
     col1, col2 = st.columns(2)
+
     with col1:
-        st.image("page1.png", caption="Air Quality Index Dashboard", use_container_width=True)
+        st.image("data\page1.png", caption="Air Quality Index Dashboard", use_container_width=True)
+
     with col2:
-        st.image("page2.png", caption="Pollutant Levels by City", use_container_width=True)
-    st.write("[Download Power BI Dashboard](https://apps.microsoft.com/detail/9ntxr16hnw1t)")
+        st.image("data\page2.png", caption="Pollutant Levels by City", use_container_width=True)
+
+    st.write("Due to a technical issue on our side, we are unable to display the report online, [Install PowerBI Desktop](https://apps.microsoft.com/detail/9ntxr16hnw1t?launch=true&mode=full&hl=en-us&gl=in&ocid=bingwebsearch) , download below given pbix file and view the report ")
+    #st.write("[Install PowerBI Desktop](https://apps.microsoft.com/detail/9ntxr16hnw1t?launch=true&mode=full&hl=en-us&gl=in&ocid=bingwebsearch)")
+    # Provide download option for the Power BI file
+    pbix_file_path = "data\Final Dashboard.pbix"  # Ensure the file is in the correct location
+    
+    with open(pbix_file_path, "rb") as file:
+        st.download_button(
+            label="Download Power BI Dashboard (.pbix)",
+            data=file,
+            file_name="Final Dashboard.pbix",
+            mime="application/octet-stream"
+        )
+
 
 # Chatbot Page
 qa_df = pd.read_csv("cb_questions.csv").dropna(subset=["Question", "Answer"])
