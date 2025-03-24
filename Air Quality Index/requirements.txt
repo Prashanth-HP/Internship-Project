@@ -1,2 +1,6 @@
+streamlit
 fuzzywuzzy
-python-Levenshtein  # Recommended for better performance
+python-Levenshtein
+pandas
+numpy
+matplotlib
