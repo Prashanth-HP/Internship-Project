@@ -64,7 +64,7 @@ def dashboard_page():
     st.write("Due to a technical issue on our side, we are unable to display the report online, [Install PowerBI Desktop](https://apps.microsoft.com/detail/9ntxr16hnw1t?launch=true&mode=full&hl=en-us&gl=in&ocid=bingwebsearch) , download below given pbix file and view the report ")
     #st.write("[Install PowerBI Desktop](https://apps.microsoft.com/detail/9ntxr16hnw1t?launch=true&mode=full&hl=en-us&gl=in&ocid=bingwebsearch)")
     # Provide download option for the Power BI file
-    pbix_file_path = "data\Final Dashboard.pbix"  # Ensure the file is in the correct location
+    pbix_file_path = "Final Dashboard.pbix"  # Ensure the file is in the correct location
     
     with open(pbix_file_path, "rb") as file:
         st.download_button(
