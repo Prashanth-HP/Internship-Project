@@ -1,6 +1,6 @@
 streamlit
-rapidfuzz
-python-Levenshtein
 pandas
 numpy
 matplotlib
+plotly
+rapidfuzz
