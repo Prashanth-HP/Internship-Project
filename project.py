@@ -13,13 +13,13 @@ def dashboard_page():
     st.title("Power BI Dashboard")
     col1, col2 = st.columns(2)
     with col1:
-        st.image("data/page1.png", caption="Air Quality Index Dashboard", use_container_width=True)
+        st.image("page1.png", caption="Air Quality Index Dashboard", use_container_width=True)
     with col2:
-        st.image("data/page2.png", caption="Pollutant Levels by City", use_container_width=True)
+        st.image("page2.png", caption="Pollutant Levels by City", use_container_width=True)
     st.write("[Download Power BI Dashboard](https://apps.microsoft.com/detail/9ntxr16hnw1t)")
 
 # Chatbot Page
-qa_df = pd.read_csv("data/cb_questions.csv").dropna(subset=["Question", "Answer"])
+qa_df = pd.read_csv("cb_questions.csv").dropna(subset=["Question", "Answer"])
 qa_df["Question"] = qa_df["Question"].str.strip()
 
 def get_best_match(user_input):
